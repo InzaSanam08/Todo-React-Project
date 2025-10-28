@@ -25,7 +25,7 @@ function App() {
 
   // Toggle complete status
   const handleToggleComplete = (id) => {
-    setTodos(todos.map(todo => 
+    setTodos(todos.map(todo =>
       todo.id === id ? { ...todo, completed: !todo.completed } : todo
     ))
   }
@@ -47,13 +47,13 @@ function App() {
       <h1 className="todo-heading">My To-Do List</h1>
 
       <div className="todo-input-container">
-        <input 
-          type="text" 
-          value={text} 
+        <input
+          type="text"
+          value={text}
           onChange={(e) => setText(e.target.value)}
           onKeyPress={handleKeyPress}
-          placeholder="Add a new task..." 
-          className="todo-input" 
+          placeholder="Add a new task..."
+          className="todo-input"
         />
         <button onClick={handleAdd} className="todo-btn">
           Add
@@ -72,8 +72,8 @@ function App() {
               <li key={todo.id} className={`todo-li ${todo.completed ? 'completed' : ''}`}>
                 <div className="todo-item">
                   <span className="todo-text">{todo.text}</span>
-                  <button 
-                    onClick={() => handleDelete(todo.id)} 
+                  <button
+                    onClick={() => handleDelete(todo.id)}
                     className="delete-btn"
                   >
                     Delete
